@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brutalist Minimalist 3-Color Palette */
+  --void-black: #030303;
+  --starlight-white: #F5F5F7;
+  --accent-amber: #F59E0B;
+  
+  /* Semantic tokens mapped to palette */
+  --background: #030303;
+  --foreground: #F5F5F7;
+  --card: #0a0a0a;
+  --card-foreground: #F5F5F7;
+  --popover: #050505;
+  --popover-foreground: #F5F5F7;
+  --primary: #F59E0B;
+  --primary-foreground: #030303;
+  --secondary: #0f0f0f;
+  --secondary-foreground: #F5F5F7;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #F59E0B;
+  --accent-foreground: #030303;
+  --destructive: #dc2626;
+  --destructive-foreground: #F5F5F7;
+  --border: rgba(245, 245, 247, 0.1);
+  --input: #0a0a0a;
+  --ring: #F59E0B;
+  --radius: 0px;
+}
+
+@theme inline {
+  --font-sans: 'Space Grotesk', 'Space Grotesk Fallback', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-[#030303] text-[#F5F5F7];
+  }
+  html {
+    scroll-behavior: smooth;
+    background-color: #030303;
+  }
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 245, 247, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 245, 247, 0.3);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #F5F5F7;
+}
